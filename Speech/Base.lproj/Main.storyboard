@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Speech" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3No-zj-4LH">
+                                <rect key="frame" x="20" y="152.5" width="374" height="651.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">backpack belt blouse boot button cap
+cloth
+coat collar cotton dress
+dry cleaning earring fashion fasten
+fit 
+fold  glasses</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgo-Jv-ZrL">
+                                <rect key="frame" x="20" y="812" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8ZR-VP-TKG"/>
+                                </constraints>
+                                <state key="normal" title="Speech">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="speak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8m9-FM-LsR"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="REg-9X-duK">
+                                <rect key="frame" x="74" y="67.5" width="272" height="31"/>
+                                <connections>
+                                    <action selector="delaySlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="f32-FI-I5s"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBS-Xa-byB">
+                                <rect key="frame" x="20" y="72" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYe-eZ-Gp8">
+                                <rect key="frame" x="352" y="75" width="54" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpY-hU-ONr">
+                                <rect key="frame" x="20" y="112.5" width="374" height="30"/>
+                                <state key="normal" title="British"/>
+                                <connections>
+                                    <action selector="btnLang:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPQ-TM-r8e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3No-zj-4LH" firstAttribute="top" secondItem="QpY-hU-ONr" secondAttribute="bottom" constant="10" id="5Z2-o8-3W5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3No-zj-4LH" secondAttribute="trailing" constant="20" id="5tu-UP-Zda"/>
+                            <constraint firstItem="qYe-eZ-Gp8" firstAttribute="leading" secondItem="REg-9X-duK" secondAttribute="trailing" constant="8" id="7ez-wy-n0M"/>
+                            <constraint firstItem="REg-9X-duK" firstAttribute="leading" secondItem="xBS-Xa-byB" secondAttribute="trailing" constant="8" id="EOo-VK-ZT2"/>
+                            <constraint firstItem="QpY-hU-ONr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="I3M-f0-KIq"/>
+                            <constraint firstItem="QpY-hU-ONr" firstAttribute="top" secondItem="REg-9X-duK" secondAttribute="bottom" constant="15" id="IoX-97-QDq"/>
+                            <constraint firstItem="Bgo-Jv-ZrL" firstAttribute="trailing" secondItem="3No-zj-4LH" secondAttribute="trailing" id="OTg-Fd-FA8"/>
+                            <constraint firstItem="qYe-eZ-Gp8" firstAttribute="centerY" secondItem="REg-9X-duK" secondAttribute="centerY" id="Swd-wv-687"/>
+                            <constraint firstItem="xBS-Xa-byB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UXt-QZ-vC2"/>
+                            <constraint firstItem="Bgo-Jv-ZrL" firstAttribute="top" secondItem="3No-zj-4LH" secondAttribute="bottom" constant="8" id="VlX-MP-6bZ"/>
+                            <constraint firstItem="REg-9X-duK" firstAttribute="centerY" secondItem="xBS-Xa-byB" secondAttribute="centerY" id="Wyd-Bk-34I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bgo-Jv-ZrL" secondAttribute="bottom" constant="10" id="anx-FO-TGc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qYe-eZ-Gp8" secondAttribute="trailing" constant="8" id="d2S-zs-T2P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QpY-hU-ONr" secondAttribute="trailing" constant="20" id="g3K-Iu-SKe"/>
+                            <constraint firstItem="Bgo-Jv-ZrL" firstAttribute="leading" secondItem="3No-zj-4LH" secondAttribute="leading" id="kTu-nq-ojD"/>
+                            <constraint firstItem="3No-zj-4LH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tpL-pK-Yno"/>
+                            <constraint firstItem="xBS-Xa-byB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="y0N-VK-0tD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnLang" destination="QpY-hU-ONr" id="ZBO-Ix-RaX"/>
+                        <outlet property="btnSpeech" destination="Bgo-Jv-ZrL" id="zVH-T5-wKK"/>
+                        <outlet property="delaySlider" destination="REg-9X-duK" id="Uam-df-hUt"/>
+                        <outlet property="txtDelay" destination="qYe-eZ-Gp8" id="gh7-FN-zC3"/>
+                        <outlet property="txtText" destination="3No-zj-4LH" id="0xC-0l-gwt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.623188405797109" y="139.95535714285714"/>
+        </scene>
+    </scenes>
+</document>
